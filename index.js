@@ -35,8 +35,7 @@ const server = http.createServer((req, res) => {
   } else if (req.method == "GET" && req.url === "/uuid") {
     res.writeHead(200, { "content-type": "application/json" });
     res.end(JSON.stringify(uuid.v4()));
-  }
-  if (req.url.startsWith("/status/")) {
+  } else if (req.url.startsWith("/status/")) {
     let arr = req.url.split("/");
     const getCode = arr[2];
     const statusMessages = {
@@ -55,8 +54,7 @@ const server = http.createServer((req, res) => {
       res.writeHead(400, { "content-type": "text/plain" });
       res.end("Invalid status code");
     }
-  }
-  if (req.method === "GET" && req.url.startsWith("/delay/")) {
+  } else if (req.method === "GET" && req.url.startsWith("/delay/")) {
     let arr = req.url.split("/");
     const sec = arr[2];
     setTimeout(() => {
