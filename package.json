@@ -1,15 +1,20 @@
 {
   "name": "http",
   "version": "1.0.0",
-  "description": "",
+  "description": "Go through the following link to learn the basics of the node `http` standard library. [https://flaviocopes.com/node-module-http/](https://flaviocopes.com/node-module-http/)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node.express",
+    "dev": "nodemon express"
   },
   "keywords": [],
   "author": "baskar",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.18.2",
     "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }
